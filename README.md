@@ -1,7 +1,6 @@
 # UOJ 界面美化插件 v4 — 通用版 (UOJ Beautify Universal)
 
 **适用于所有 UOJ 及其变体站点**（任意域名，Bootstrap 3 / Bootstrap 4 版式均可），**自动识别、无需配置**。
-视觉参考 [DSH-Transparent-UI-Plugin](https://github.com/WYH66666666/DSH-Transparent-UI-Plugin)（DeepSeek Harness 的玻璃主题）。
 不改动服务器任何文件，通过浏览器用户脚本（Tampermonkey / Greasemonkey / Violentmonkey）注入样式与增强脚本，即装即用。
 
 ## 🔍 通用识别机制
@@ -95,9 +94,6 @@ var CONFIG = {
 
 > 说明：`/blog/*` 与 `/faq` 页面存在 404 控制台提示，经核实为**站点自身缺失资源**，与插件无关（无插件访问同样出现）。
 
-## 📸 截图
-
-见 `screenshots/` 目录：`before-*.png`（原始界面）与 `final-*-light/dark.png`（ 风格各页面明暗主题）。
 
 ## 📄 许可
 
