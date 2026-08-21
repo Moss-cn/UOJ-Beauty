@@ -1,218 +1,106 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<title>HJOJ - Huaijin Online Judge</title>
-		
-		<script type="text/javascript">uojHome = 'http://47.116.5.138'</script>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UOJ - Universal Online Judge</title>
+<script type="text/javascript">uojHome = ''</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
 
-		<!-- Bootstrap core CSS -->
-		<link type="text/css" rel="stylesheet" href="http://47.116.5.138/css/bootstrap.min.css?v=2019.5.31" />		<!-- Bootstrap Glyphicons CSS-->
-		<link type="text/css" rel="stylesheet" href="http://47.116.5.138/css/bootstrap-glyphicons.min.css?v=2019.5.31" />
-		<!-- Custom styles for this template -->
-		<link type="text/css" rel="stylesheet" href="http://47.116.5.138/css/uoj-theme.css?v=2.3333" />		
-		<!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
-		<script src="http://47.116.5.138/js/jquery.min.js"></script>		
-		<!-- jQuery autosize -->
-		<script src="http://47.116.5.138/js/jquery.autosize.min.js"></script>		<script type="text/javascript">
-			$(document).ready(function() {
-				$('textarea').autosize();
-			});
-		</script>
-		
-		<!-- jQuery cookie -->
-		<script src="http://47.116.5.138/js/jquery.cookie.min.js"></script>		
-		<!-- jQuery modal -->
-		<script src="http://47.116.5.138/js/jquery.modal.js"></script>		
-				
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="http://47.116.5.138/js/popper.min.js?v=2019.5.31"></script>		<script src="http://47.116.5.138/js/bootstrap.min.js?v=2019.5.31"></script>		
-		<!-- Color converter -->
-		<script src="http://47.116.5.138/js/color-converter.min.js"></script>		
-		<!-- uoj -->
-		<script src="http://47.116.5.138/js/uoj.js?v=2017.01.01"></script>		
-		<!-- readmore -->
-		<script src="http://47.116.5.138/js/readmore/readmore.min.js"></script>		
-		<!-- LAB -->
-		<script src="http://47.116.5.138/js/LAB.min.js"></script>
-		<!-- favicon -->
-		<link rel="shortcut icon" href="http://47.116.5.138/images/favicon.ico" />
-		
-				
-				
-				
-				
-				
-				
-				
-		
-				
-				
-				
-				
-				
-		
-		
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		
-		<script type="text/javascript">
-		before_window_unload_message = null;
-		$(window).on('beforeunload', function() {
-			if (before_window_unload_message !== null) {
-			    return before_window_unload_message;
-			}
-		});
-		</script>
-		
-			</head>
-	<body role="document">
-		<div class="container theme-showcase" role="main">
-						<div>
-				<ul class="nav nav-pills float-right" role="tablist">
-									<li class="nav-item" role="presentation"><a class="nav-link" href="http://47.116.5.138/login">登录</a></li>
-					<li class="nav-item" role="presentation"><a class="nav-link" href="http://47.116.5.138/register">注册</a></li>
-								</ul>
-				<h1 class="d-none d-sm-block"><a href="http://47.116.5.138"><img src="http://47.116.5.138/images/logo_small.png" alt="Logo" class="img-rounded" style="width:39px; height:39px;" /></a> Huaijin Online Judge</h1>
-				<h1 class="d-block d-sm-none">HJOJ</h1>
-			</div>
-			
-			
+</head>
+<body>
+<div class="container theme-showcase" role="main">
+  <div>
+    <ul class="nav nav-pills float-right" role="tablist">
+      <li class="nav-item" role="presentation"><a class="nav-link" href="/login">登录</a></li>
+      <li class="nav-item" role="presentation"><a class="nav-link" href="/register">注册</a></li>
+    </ul>
+    <h1 class="d-none d-sm-block"><a href="/"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'><rect width='44' height='44' rx='12' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23007aff'/><stop offset='1' stop-color='%23bf5af2'/></linearGradient></defs><text x='22' y='30' font-size='24' font-weight='bold' text-anchor='middle' fill='white' font-family='sans-serif'>U</text></svg>" alt="Logo" class="img-rounded" /></a> Universal Online Judge</h1>
+    <h1 class="d-block d-sm-none">UOJ</h1>
+  </div>
+
+  
 <div style="background:linear-gradient(135deg,#007aff,#bf5af2);color:#fff;padding:10px 16px;border-radius:14px;margin-bottom:14px;font-size:13px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 14px rgba(0,122,255,.3)">
-  <span><b>UOJ 美化插件 v3.2 · Aqua 玻璃风格预览</b> —— 右下角：明暗 / 粒子 / 回到顶部</span>
-  <span style="font-size:11px;opacity:.85">preview.html · 需联网加载站点样式</span>
+  <span><b>UOJ 美化插件 v4 · Aqua 玻璃风格预览</b> —— 右下角：明暗 / 粒子 / 回到顶部</span>
+  <span style="font-size:11px;opacity:.85">通用版 · 自动识别所有 UOJ 及变体</span>
 </div>
 <div class="navbar navbar-light navbar-expand-md bg-light mb-4" role="navigation">
-	<a class="navbar-brand" href="http://47.116.5.138">HJOJ</a>
-	<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="nav navbar-nav mr-auto">
-			<li class="nav-item"><a class="nav-link" href="http://47.116.5.138/contests"><span class="glyphicon glyphicon-stats"></span> 比赛</a></li>
-			<li class="nav-item"><a class="nav-link" href="http://47.116.5.138/problems"><span class="glyphicon glyphicon-list-alt"></span> 题库</a></li>
-			<li class="nav-item"><a class="nav-link" href="http://47.116.5.138/submissions"><span class="glyphicon glyphicon-tasks"></span> 提交记录</a></li>
-			<li class="nav-item"><a class="nav-link" href="http://47.116.5.138/hacks"><span class="glyphicon glyphicon-flag"></span> Hack!</a></li>
-			<li class="nav-item"><a class="nav-link" href="http://47.116.5.138/blogs"><span class="glyphicon glyphicon-edit"></span> 博客</a></li>
-			<li class="nav-item"><a class="nav-link" href="http://47.116.5.138/faq"><span class="glyphicon glyphicon-info-sign"></span> 帮助</a></li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<span class="glyphicon glyphicon-wrench"></span>
-					工具
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="http://47.116.5.138/paste"><span class="glyphicon glyphicon-paste"></span> 代码分享 </a>
-					<a class="dropdown-item" href="http://47.116.5.138/map_visualizer"><span class="glyphicon glyphicon-retweet"></span> 图可视化 </a>
-				</div>
-			</li>
-		</ul>
-		<form id="form-search-problem" class="form-inline my-2 my-lg-0" method="get">
-			 <div class="input-group">
-				<input type="text" class="form-control" name="search" id="input-search" placeholder="搜索" />  
-				<div class="input-group-append">
-					<button type="submit" class="btn btn-search btn-outline-primary" id="submit-search"><span class="glyphicon glyphicon-search"></span></button>
-				</div>
-			</div>
-		</form>
-	</div><!--/.nav-collapse -->
-</div>
-<script type="text/javascript">
-	var zan_link = '';
-	$('#form-search-problem').submit(function(e) {
-		e.preventDefault();
-		
-		url = 'http://47.116.5.138/problems';
-		qs = [];
-		$(['search']).each(function () {
-			if ($('#input-' + this).val()) {
-				qs.push(this + '=' + encodeURIComponent($('#input-' + this).val()));
-			}
-		});
-		if (qs.length > 0) {
-			url += '?' + qs.join('&');
-		}
-		location.href = url;
-	});
-</script>						
-			<div class="uoj-content">
-<div class="card card-default">
-	<div class="card-body">
-		<div class="row">
-			<div class="col-sm-12 col-md-9">
-				<table class="table table-sm">
-					<thead>
-						<tr>
-							<th style="width:60%">公告</th>
-							<th style="width:20%"></th>
-							<th style="width:20%"></th>
-						</tr>
-					</thead>
-				  	<tbody>
-																						<tr>
-							<td><a href="/blogs/144">HJOI NRound 7 Rating奖励</a></td>
-							<td>by <span class="uoj-username" data-rating="2000">CXY1999</span></td>
-							<td><small>2026-07-22 23:16:08</small></td>
-						</tr>
-																	<tr>
-							<td><a href="/blogs/138">论洛谷整个青难度对HJOI的影响</a></td>
-							<td>by <span class="uoj-username" data-rating="2000">CXY1999</span></td>
-							<td><small>2026-07-01 04:06:50</small></td>
-						</tr>
-																	<tr>
-							<td><a href="/blogs/80">HJOI Rating计算方法</a></td>
-							<td>by <span class="uoj-username" data-rating="2000">CXY1999</span></td>
-							<td><small>2026-05-06 23:00:41</small></td>
-						</tr>
-																	<tr>
-							<td><a href="/blogs/120">HJOI Rating惩罚</a></td>
-							<td>by <span class="uoj-username" data-rating="2000">CXY1999</span></td>
-							<td><small>2026-06-07 23:16:20</small></td>
-						</tr>
-																	<tr>
-							<td><a href="/blogs/32">警告——不要滥用博客功能</a></td>
-							<td>by <span class="uoj-username" data-rating="2000">CXY1999</span></td>
-							<td><small>2026-03-26 22:37:40</small></td>
-						</tr>
-																<tr><td class="text-right" colspan="233"><a href="/announcements">所有公告……</a></td></tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3">
-				<img class="media-object img-thumbnail" src="/images/logo.png" alt="Logo" />
-			</div>
-		</div>
-	</div>
-</div>
+    <a class="navbar-brand" href="/">UOJ</a>
+    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/contests"><span class="glyphicon glyphicon-stats"></span> 比赛</a></li>
+        <li class="nav-item"><a class="nav-link" href="/problems"><span class="glyphicon glyphicon-list-alt"></span> 题库</a></li>
+        <li class="nav-item"><a class="nav-link" href="/submissions"><span class="glyphicon glyphicon-tasks"></span> 提交记录</a></li>
+        <li class="nav-item"><a class="nav-link" href="/hacks"><span class="glyphicon glyphicon-flag"></span> Hack!</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blogs"><span class="glyphicon glyphicon-edit"></span> 博客</a></li>
+        <li class="nav-item"><a class="nav-link" href="/faq"><span class="glyphicon glyphicon-info-sign"></span> 帮助</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"><span class="glyphicon glyphicon-wrench"></span> 工具</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/paste"><span class="glyphicon glyphicon-paste"></span> 代码分享</a>
+            <a class="dropdown-item" href="/map_visualizer"><span class="glyphicon glyphicon-retweet"></span> 图可视化</a>
+          </div>
+        </li>
+      </ul>
+      <form id="form-search-problem" class="form-inline my-2 my-lg-0" method="get">
+        <div class="input-group">
+          <input type="text" class="form-control" name="search" id="input-search" placeholder="搜索" />
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-outline-primary" id="submit-search"><span class="glyphicon glyphicon-search"></span></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="uoj-content">
+
+<div class="card card-default"><div class="card-body">
+  <div class="row">
+    <div class="col-sm-12 col-md-9">
+      <table class="table table-sm">
+        <thead><tr><th style="width:60%">公告</th><th style="width:20%"></th><th style="width:20%"></th></tr></thead>
+        <tbody>
+          <tr><td><a href="/blogs/1">Universal Round #7 奖励公告</a></td><td>by <span class="uoj-username" data-rating="2200">admin</span></td><td><small>2026-07-22 23:16:08</small></td></tr>
+          <tr><td><a href="/blogs/2">关于提交记录界面的说明</a></td><td>by <span class="uoj-username" data-rating="1900">coder1</span></td><td><small>2026-07-01 04:06:50</small></td></tr>
+          <tr><td><a href="/blogs/3">Rating 计算方式</a></td><td>by <span class="uoj-username" data-rating="2400">grandmaster</span></td><td><small>2026-06-07 23:16:20</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-3">
+      <img class="media-object img-thumbnail" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><rect width='160' height='160' rx='24' fill='url(%23g2)'/><defs><linearGradient id='g2' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23007aff'/><stop offset='1' stop-color='%23bf5af2'/></linearGradient></defs><text x='80' y='96' font-size='64' font-weight='bold' text-anchor='middle' fill='white' font-family='sans-serif'>UOJ</text></svg>" alt="Logo" />
+    </div>
+  </div>
+</div></div>
+
 <div class="row">
-	<div class="col-sm-12 mt-4">
-		<h3>比赛排行榜</h3>
-		<div class="table-responsive"><table class="table table-bordered table-hover table-striped table-text-center"><thead><tr><th style="width: 5em;">#</th><th style="width: 14em;">用户名</th><th style="width: 50em;">格言</th><th style="width: 5em;">Rating</th></tr></thead><tbody><tr><td>1</td><td><span class="uoj-username" data-rating="2000">CXY1999</span></td><td></td><td>2000</td></tr><tr><td>1</td><td><span class="uoj-username" data-rating="2000">SDUCai</span></td><td>测试用账号</td><td>2000</td></tr><tr><td>3</td><td><span class="uoj-username" data-rating="1669">2025liruohan</span></td><td>#include&lt;bits/stdc++.h&gt;</td><td>1669</td></tr><tr><td>4</td><td><span class="uoj-username" data-rating="1560">2024sunyiheng</span></td><td></td><td>1560</td></tr><tr><td>5</td><td><span class="uoj-username" data-rating="1534">2025zhaojunjie</span></td><td>是亦不可以已乎，此之谓失其本心</td><td>1534</td></tr><tr><td>6</td><td><span class="uoj-username" data-rating="1507">2025renzirui</span></td><td></td><td>1507</td></tr><tr><td>7</td><td><span class="uoj-username" data-rating="1506">2025xinjiayu</span></td><td></td><td>1506</td></tr><tr><td>8</td><td><span class="uoj-username" data-rating="1500">2025chenxuangeng</span></td><td></td><td>1500</td></tr><tr><td>8</td><td><span class="uoj-username" data-rating="1500">2025diaojingyi</span></td><td></td><td>1500</td></tr><tr><td>8</td><td><span class="uoj-username" data-rating="1500">2025gudonghao</span></td><td></td><td>1500</td></tr></tbody></table></div>		<div class="text-center">
-			<a href="/ranklist">查看全部</a>
-		</div>
-	</div>
+  <div class="col-sm-12 mt-4">
+    <h3>比赛排行榜</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover table-striped table-text-center">
+        <thead><tr><th style="width: 5em;">#</th><th style="width: 14em;">用户名</th><th style="width: 50em;">格言</th><th style="width: 5em;">Rating</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="uoj-username" data-rating="2400">grandmaster</span></td><td>Think different.</td><td>2400</td></tr>
+          <tr><td>2</td><td><span class="uoj-username" data-rating="2200">admin</span></td><td>测试用账号</td><td>2200</td></tr>
+          <tr><td>3</td><td><span class="uoj-username" data-rating="1900">coder1</span></td><td>#include &lt;bits/stdc++.h&gt;</td><td>1900</td></tr>
+          <tr><td>4</td><td><span class="uoj-username" data-rating="1600">beginner</span></td><td>是亦不可以已乎</td><td>1600</td></tr>
+          <tr><td>5</td><td><span class="uoj-username" data-rating="1400">newbie</span></td><td></td><td>1400</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center"><a href="/ranklist">查看全部</a></div>
+  </div>
 </div>
-			</div>
-						<div class="uoj-footer">
-				<div class="btn-group dropright mb-3">
-					<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-						<span class="glyphicon glyphicon-globe"></span> 中文					</button>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="http://47.116.5.138/?locale=zh-cn">中文</a>
-						<a class="dropdown-item" href="http://47.116.5.138/?locale=en">English</a>
-					</div>
-				</div>
-				
-				<ul class="list-inline"><li class="list-inline-item">Huaijin Online Judge</li></ul>
-								<p>服务器时间: 2026-08-20 20:13:39 | <a href="https://github.com/UniversalOJ/UOJ-System" target="_blank">开源项目</a></p>
-			</div>
-					</div>
-		<!-- /container -->
-	<script>/*
+  </div>
+
+  <div class="uoj-footer">
+    <a href="/">UOJ</a> · Universal Online Judge 界面演示页（美化插件效果预览）
+  </div>
+</div>
+<script>/*
  * ============================================================================
  *  UOJ 界面美化插件 v4 — 通用版 (UOJ Beautify Universal)
  * ----------------------------------------------------------------------------
@@ -223,7 +111,7 @@
  *   1. color-mix 霜度玻璃：导航条/卡片/菜单/弹窗/浮动按钮（--ub-frost 可调）
  *   2. 光标交互动态背景：粒子网络 + 光标吸引/连线/柔光（canvas，z-index:-1）
  *   3. 边缘渐变模糊带 + 光泽铭牌（135° 渐变描边药丸）
- *   4. 暗色模式 / 回到顶部 / 代码复制 / macOS 开关 / 分段控件
+ *   4. 暗色模式 / 回到顶部 / 代码复制 / Switch 开关 / 分段控件
  *
  *  自动检测机制：
  *   - document-start 起用 MutationObserver 嗅探 UOJ 特征：
@@ -259,7 +147,8 @@
 
 	// ------------------------------------------------------------------ UOJ 自动检测
 	var _host = location.hostname;
-	if (CONFIG.disableHosts.indexOf(_host) !== -1) return;
+	/* 预览模式：强制激活 */
+	_active = true;
 	var _whitelisted = CONFIG.hosts.length > 0 && CONFIG.hosts.indexOf(_host) !== -1;
 	if (CONFIG.hosts.length > 0 && !_whitelisted) return;
 	var _active = _whitelisted || CONFIG.forceHosts.indexOf(_host) !== -1;
@@ -396,7 +285,7 @@
 		'::selection{background:rgba(0,122,255,.22);color:inherit}',
 		'a:focus-visible,button:focus-visible,.btn:focus-visible,.nav-link:focus-visible,.page-link:focus-visible,.form-control:focus-visible{outline:3px solid rgba(0,122,255,.35);outline-offset:2px;border-radius:8px}',
 		'',
-		'/* 细滚动条（macOS 风格） */',
+		'/* 细滚动条 */',
 		'::-webkit-scrollbar{width:9px;height:9px}',
 		'::-webkit-scrollbar-track{background:transparent}',
 		'::-webkit-scrollbar-thumb{background:rgba(120,120,128,.35);border-radius:8px;border:2px solid transparent;background-clip:content-box}',
@@ -543,7 +432,7 @@
 		'.pagination > li > a:hover{background:var(--ub-field);color:var(--ub-accent)}',
 		'.pagination > li.active > a,.pagination > li.active > span{background:var(--ub-accent);color:#fff;box-shadow:0 4px 12px rgba(0,122,255,.35)}',
 		'',
-		'/* ========== 表格（macOS 列表风格） ========== */',
+		'/* ========== 表格（Aqua 列表风格） ========== */',
 		'.table{color:var(--ub-text);border-color:var(--ub-border)}',
 		'.table thead th{',
 		'  background:rgba(0,0,0,.03);color:var(--ub-muted);',
@@ -565,7 +454,7 @@
 		'.table a:not(.uoj-username){font-weight:600}',
 		'.table .uoj-username,.table .uoj-honor{font-weight:800}',
 		'',
-		'/* ========== 按钮 / 输入框（macOS 风格） ========== */',
+		'/* ========== 按钮 / 输入框 ========== */',
 		'.btn{border-radius:10px;font-weight:600;transition:filter .15s,box-shadow .15s,transform .1s}',
 		'.btn:active{transform:translateY(1px)}',
 		'.btn-primary{background:linear-gradient(180deg,var(--ub-accent-2),var(--ub-accent));border:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 3px 10px rgba(0,122,255,.30)}',
@@ -584,7 +473,7 @@
 		'select.form-control{background-color:var(--ub-field)}',
 		'.input-group-text{background:var(--ub-field);border:none;color:var(--ub-text);border-radius:9px}',
 		'',
-		'/* ========== macOS 开关 ========== */',
+		'/* ========== Switch 开关 ========== */',
 		'label.checkbox-inline,label.checkbox{display:inline-flex;align-items:center;gap:7px}',
 		'input.ub-switched{position:absolute;opacity:0;pointer-events:none}',
 		'.ub-switch{',
@@ -608,7 +497,7 @@
 		'.pagination .page-item.active .page-link{background:var(--ub-accent);color:#fff;box-shadow:0 4px 12px rgba(0,122,255,.35)}',
 		'.pagination .page-item.disabled .page-link{color:var(--ub-muted);background:transparent}',
 		'',
-		'/* ========== 徽章 / 标签（macOS 色板） ========== */',
+		'/* ========== 徽章 / 标签（Aqua 色板） ========== */',
 		'.badge{border-radius:999px;font-weight:600;padding:.35em .7em}',
 		'.badge-secondary{background:#8e8e93}',
 		'.badge-success{background:var(--ub-green)}',
@@ -814,7 +703,7 @@
 		}
 	}
 
-	// ------------------------------------------------------------------ 登录/注册：主操作高亮（macOS 强调按钮）
+	// ------------------------------------------------------------------ 登录/注册：主操作高亮
 	function enhanceAuthButtons() {
 		var ul = document.querySelector('.theme-showcase>div:first-child .nav-pills');
 		if (!ul || ul.getAttribute('data-ub-auth')) return;
@@ -828,7 +717,7 @@
 		}
 	}
 
-	// ------------------------------------------------------------------ macOS 开关
+	// ------------------------------------------------------------------ Switch 开关
 	function enhanceCheckboxes(root) {
 		var inputs = (root || document).querySelectorAll('label input[type="checkbox"]');
 		for (var i = 0; i < inputs.length; i++) {

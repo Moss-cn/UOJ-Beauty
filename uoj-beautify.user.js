@@ -25,7 +25,7 @@
  *   1. color-mix 霜度玻璃：导航条/卡片/菜单/弹窗/浮动按钮（--ub-frost 可调）
  *   2. 光标交互动态背景：粒子网络 + 光标吸引/连线/柔光（canvas，z-index:-1）
  *   3. 边缘渐变模糊带 + 光泽铭牌（135° 渐变描边药丸）
- *   4. 暗色模式 / 回到顶部 / 代码复制 / macOS 开关 / 分段控件
+ *   4. 暗色模式 / 回到顶部 / 代码复制 / Switch 开关 / 分段控件
  *
  *  自动检测机制：
  *   - document-start 起用 MutationObserver 嗅探 UOJ 特征：
@@ -198,7 +198,7 @@
 		'::selection{background:rgba(0,122,255,.22);color:inherit}',
 		'a:focus-visible,button:focus-visible,.btn:focus-visible,.nav-link:focus-visible,.page-link:focus-visible,.form-control:focus-visible{outline:3px solid rgba(0,122,255,.35);outline-offset:2px;border-radius:8px}',
 		'',
-		'/* 细滚动条（macOS 风格） */',
+		'/* 细滚动条 */',
 		'::-webkit-scrollbar{width:9px;height:9px}',
 		'::-webkit-scrollbar-track{background:transparent}',
 		'::-webkit-scrollbar-thumb{background:rgba(120,120,128,.35);border-radius:8px;border:2px solid transparent;background-clip:content-box}',
@@ -345,7 +345,7 @@
 		'.pagination > li > a:hover{background:var(--ub-field);color:var(--ub-accent)}',
 		'.pagination > li.active > a,.pagination > li.active > span{background:var(--ub-accent);color:#fff;box-shadow:0 4px 12px rgba(0,122,255,.35)}',
 		'',
-		'/* ========== 表格（macOS 列表风格） ========== */',
+		'/* ========== 表格（Aqua 列表风格） ========== */',
 		'.table{color:var(--ub-text);border-color:var(--ub-border)}',
 		'.table thead th{',
 		'  background:rgba(0,0,0,.03);color:var(--ub-muted);',
@@ -367,7 +367,7 @@
 		'.table a:not(.uoj-username){font-weight:600}',
 		'.table .uoj-username,.table .uoj-honor{font-weight:800}',
 		'',
-		'/* ========== 按钮 / 输入框（macOS 风格） ========== */',
+		'/* ========== 按钮 / 输入框 ========== */',
 		'.btn{border-radius:10px;font-weight:600;transition:filter .15s,box-shadow .15s,transform .1s}',
 		'.btn:active{transform:translateY(1px)}',
 		'.btn-primary{background:linear-gradient(180deg,var(--ub-accent-2),var(--ub-accent));border:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 3px 10px rgba(0,122,255,.30)}',
@@ -386,7 +386,7 @@
 		'select.form-control{background-color:var(--ub-field)}',
 		'.input-group-text{background:var(--ub-field);border:none;color:var(--ub-text);border-radius:9px}',
 		'',
-		'/* ========== macOS 开关 ========== */',
+		'/* ========== Switch 开关 ========== */',
 		'label.checkbox-inline,label.checkbox{display:inline-flex;align-items:center;gap:7px}',
 		'input.ub-switched{position:absolute;opacity:0;pointer-events:none}',
 		'.ub-switch{',
@@ -410,7 +410,7 @@
 		'.pagination .page-item.active .page-link{background:var(--ub-accent);color:#fff;box-shadow:0 4px 12px rgba(0,122,255,.35)}',
 		'.pagination .page-item.disabled .page-link{color:var(--ub-muted);background:transparent}',
 		'',
-		'/* ========== 徽章 / 标签（macOS 色板） ========== */',
+		'/* ========== 徽章 / 标签（Aqua 色板） ========== */',
 		'.badge{border-radius:999px;font-weight:600;padding:.35em .7em}',
 		'.badge-secondary{background:#8e8e93}',
 		'.badge-success{background:var(--ub-green)}',
@@ -616,7 +616,7 @@
 		}
 	}
 
-	// ------------------------------------------------------------------ 登录/注册：主操作高亮（macOS 强调按钮）
+	// ------------------------------------------------------------------ 登录/注册：主操作高亮
 	function enhanceAuthButtons() {
 		var ul = document.querySelector('.theme-showcase>div:first-child .nav-pills');
 		if (!ul || ul.getAttribute('data-ub-auth')) return;
@@ -630,7 +630,7 @@
 		}
 	}
 
-	// ------------------------------------------------------------------ macOS 开关
+	// ------------------------------------------------------------------ Switch 开关
 	function enhanceCheckboxes(root) {
 		var inputs = (root || document).querySelectorAll('label input[type="checkbox"]');
 		for (var i = 0; i < inputs.length; i++) {
